@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user-db
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      open-in-view: false
+      hibernate:
+        ddl-auto: create-drop
+      show-sql: false
+      properties:
+        hibernate:
+          format_sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+
+spotify:
+  client-id: ${CLIENT_ID}
+  client-secret: ${CLIENT_SECRET}
+  redirect-url: ${REDIRECT_URL}
+
+cors:
+  front-end-domain: ${FRONT_END_DOMAIN}
+
+
+proxy:
+  host: ${PROXY_HOST}
